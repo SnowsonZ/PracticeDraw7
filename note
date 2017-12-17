@@ -1,0 +1,8 @@
+//特殊类型的属性来做属性动画
+TypeEvaluator 自定义多种类型动画，配合ofObject，扩展int,float等类型之外的动画
+ofMultiInt() ofMultiFloat()
+
+//复杂属性关系
+PropertyValuesHolder 同一动画中改变多个属性
+AnimatorSet 多个动画按序执行
+PropertyValuesHolders.ofKeyframe()  //同一属性拆分,比如确定某一时刻的动画值
