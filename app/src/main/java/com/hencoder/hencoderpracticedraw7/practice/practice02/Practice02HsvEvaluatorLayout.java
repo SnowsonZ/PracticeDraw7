@@ -71,7 +71,9 @@ public class Practice02HsvEvaluatorLayout extends RelativeLayout {
             }
             outHSV[1] = startHSV[1] + (endHSV[1] - startHSV[1]) * fraction;
             outHSV[2] = startHSV[2] + (endHSV[2] - startHSV[2]) * fraction;
-            return Color.HSVToColor(outHSV);
+            // 计算当前动画完成度（fraction）所对应的透明度
+            int alpha = startValue >> 24 + (int) ((endValue >> 24 - startValue >> 24) * fraction);
+            return Color.HSVToColor(alpha, outHSV);
         }
     }
 }
